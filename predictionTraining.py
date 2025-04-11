@@ -17,7 +17,6 @@ def get_all_crypto_prices(vs_currency='usd', per_page=250):
             'sparkline': False
         }
         
-        
         try:
             response = requests.get(url, params=params, timeout=10)
             print(f"Requesting page {page}... Status code: {response.status_code}")
