@@ -44,5 +44,5 @@ if button:
         price_out = data_fetcher.get_token_data(to_token)["price"]
         rate = price_in/price_out
         current_task.empty()
-        st.subheader(f"{number_tokens_from:2f} {from_token}\n"
-                 f"becomes {number_tokens_from*rate:.2f} {to_token}")
+        st.subheader(f"{number_tokens_from:2f} {from_token}")
+        st.subheader(f"becomes {number_tokens_from*rate:.2f} {to_token}")
