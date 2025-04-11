@@ -8,3 +8,6 @@ pycoingecko
 scikit-learn
 openai
 matplotlib
+dash
+dash-bootstrap-components
+gunicorn
