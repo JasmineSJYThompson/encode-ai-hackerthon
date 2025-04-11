@@ -43,12 +43,8 @@ def get_all_crypto_prices(vs_currency='usd', per_page=250):
         except requests.exceptions.RequestException as e:
             print(f"Error during request: {e}")
             break
-
     return all_data
-
-
 cryptos = get_all_crypto_prices()
-
 # Printing top 10 crypto price
 for coin in cryptos[:10]:   
     print(f"{coin['name']} ({coin['symbol'].upper()}): {coin['current_price']} USD")
