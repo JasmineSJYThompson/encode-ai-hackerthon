@@ -10,3 +10,4 @@ openai
 matplotlib
 dash
 dash-bootstrap-components
+gunicorn
