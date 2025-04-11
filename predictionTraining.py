@@ -1,7 +1,46 @@
 import requests
 import time
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
 
-#   Used coinGecko API to fetch crypto data
+    # Used coinGecko API to fetch crypto data
+    # Fetched user emails entered through application
+
+cred = credentials.Certificate("APK/firebase_key.json")
+
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://myaiagent-45599-default-rtdb.europe-west1.firebasedatabase.app/'
+})
+
+# Reference to the 'email' node in the Firebase Realtime Database
+users_ref = db.reference('Users')
+
+try:
+    # Fetch data from the 'USERS' node
+    users_data = users_ref.get()
+
+    # Print out the data to see the structure
+    print("Raw data from Firebase Realtime DB:")
+    print(users_data)
+    
+    if users_data is None:
+        print("No data found at the 'USERS' reference.")
+    else:
+        print("Data from Firebase Realtime DB:")
+        
+        # Check if the data is a dictionary
+        if isinstance(users_data, dict):
+            # Iterate through the children of USERS (each child has a random key)
+            for user_key, user_value in users_data.items():
+                # Print the email of each user
+                print(f"User ID: {user_key}, Email: {user_value['email']}")
+        else:
+            print("Error: The data is not in the expected format.")
+        
+except Exception as e:
+    print(f"Error occurred: {e}")
+
 
 def get_all_crypto_prices(vs_currency='usd', per_page=250):
     url = 'https://api.coingecko.com/api/v3/coins/markets'
