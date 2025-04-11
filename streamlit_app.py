@@ -18,7 +18,7 @@ with st.sidebar:
         generate_report_button = st.button("Generate risk report")
 
     if function_selection == "Exchange Rate Calculator":
-        exchange_rate_button = st.button("Generate ")
+        exchange_rate_button = st.button("Generate exchange rate")
 
 # Streamlit main body
 title_text = {"Generate Report": "🔍 DeFi Token Risk Analyzer", "Exchange Rate Calculator": "Exchange Rate Calculator"}
