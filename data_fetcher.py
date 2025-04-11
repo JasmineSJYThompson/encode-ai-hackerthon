@@ -13,35 +13,47 @@ SYMBOL_TO_ID = {
     "ada": "cardano",
     "matic": "polygon",
     "dot": "polkadot",
-    "ltc": "litecoin"
+    "ltc": "litecoin",
+    "gbp": "gbp",
+    "usd": "usd"
     # add more as needed
 }
 
 class MarketDataFetcher:
     def __init__(self):
         self.cg = CoinGeckoAPI()
+        self.cache = {}  # format: { (token_id, vs_currency): token_data }
 
     def get_token_data(self, token_id='ethereum', vs_currency='usd'):
+        token_id = SYMBOL_TO_ID.get(token_id.lower(), token_id.lower())
+        cache_key = (token_id, vs_currency)
+
+        if cache_key in self.cache:
+            return self.cache[cache_key]  # ✅ use cached result
+
         try:
-            token_id = SYMBOL_TO_ID.get(token_id.lower(), token_id.lower())  # Accept both full name or symbol
             data = self.cg.get_coin_market_chart_by_id(id=token_id, vs_currency=vs_currency, days=1)
             current_price = self.cg.get_price(ids=token_id, vs_currencies=vs_currency)
             market_data = self.cg.get_coin_by_id(token_id)['market_data']
-
             volatility = self.calculate_volatility(data['prices'])
 
-            return {
+            result = {
                 'token': token_id,
                 'price': current_price[token_id][vs_currency],
                 'market_cap': market_data['market_cap'][vs_currency],
                 '24h_volume': market_data['total_volume'][vs_currency],
                 'price_change_24h': market_data['price_change_percentage_24h'],
                 'volatility': volatility,
-                'raw_chart_data': data
+                'raw_chart_data': data['prices']  # keep only what's used
             }
+
+            self.cache[cache_key] = result  # ✅ store in cache
+            return result
+
         except Exception as e:
             print(f"[ERROR] Fetching market data failed: {e}")
             return None
+
     
     def calculate_volatility(self, price_data):
         """
