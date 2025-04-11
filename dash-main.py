@@ -7,6 +7,7 @@ import get_transaction_data
 
 # Initialize app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
 app.title = "DeFi Tools"
 
 analyzer = TokenSwapAnalyzer()
