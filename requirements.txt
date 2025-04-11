@@ -4,6 +4,5 @@ numpy
 pandas
 pycoingecko
 scikit-learn
-streamlit
 openai
 matplotlib
