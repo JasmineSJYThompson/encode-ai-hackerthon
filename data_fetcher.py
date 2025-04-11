@@ -3,12 +3,27 @@
 from pycoingecko import CoinGeckoAPI
 import numpy as np
 
+SYMBOL_TO_ID = {
+    "btc": "bitcoin",
+    "eth": "ethereum",
+    "usdc": "usd-coin",
+    "usdt": "tether",
+    "bnb": "binancecoin",
+    "sol": "solana",
+    "ada": "cardano",
+    "matic": "polygon",
+    "dot": "polkadot",
+    "ltc": "litecoin"
+    # add more as needed
+}
+
 class MarketDataFetcher:
     def __init__(self):
         self.cg = CoinGeckoAPI()
 
     def get_token_data(self, token_id='ethereum', vs_currency='usd'):
         try:
+            token_id = SYMBOL_TO_ID.get(token_id.lower(), token_id.lower())  # Accept both full name or symbol
             data = self.cg.get_coin_market_chart_by_id(id=token_id, vs_currency=vs_currency, days=1)
             current_price = self.cg.get_price(ids=token_id, vs_currencies=vs_currency)
             market_data = self.cg.get_coin_by_id(token_id)['market_data']
