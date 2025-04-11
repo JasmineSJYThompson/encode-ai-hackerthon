@@ -1,2 +1,5 @@
 streamlit
 requests
+web3
+networkx
+matplotlib
