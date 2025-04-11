@@ -2,4 +2,9 @@ streamlit
 requests
 web3
 networkx
+numpy
+pandas
+pycoingecko
+scikit-learn
+openai
 matplotlib
