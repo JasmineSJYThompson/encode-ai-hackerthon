@@ -6,7 +6,7 @@ st.set_page_config(page_title="Uniswap Demo with Risk Detection", page_icon="ğŸ’
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/risk_detection.csv", parse_dates=["timestamp"])
+    df = pd.read_csv("data/mock_integrated_data.csv", parse_dates=["timestamp"])
     return df
 
 df = load_data()
