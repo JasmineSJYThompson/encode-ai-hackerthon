@@ -1,6 +1,7 @@
 📉 ArgusFi App
 
 ArgusFi App is a Streamlit-powered web application with a mobile app to provide users with real-time notifications about potential risks in the cryptocurrency market. Whether it's sudden market volatility, security breaches, or regulatory changes, this tool aims to keep you informed and ahead of potential threats.
+
 🚀 Features
 
     Real-Time Risk Monitoring: Continuously analyzes market data to identify potential risks.
@@ -37,12 +38,10 @@ pip install -r requirements.txt
 Run the Application:
 
     streamlit run app.py
-
-    Set Up Mobile Notifications:
-
-        Install the companion mobile app from <insert link here>
         
 📱 Mobile App Integration
+
+The Android app can be downloaded from the link --> https://kamilamin43920.s3.eu-north-1.amazonaws.com/AiAgent.apk
 
 The mobile app complements the web application by providing:
 
