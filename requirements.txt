@@ -6,7 +6,7 @@ numpy
 pandas
 pycoingecko
 scikit-learn
-openai
+openai==0.28
 matplotlib
 dash
 dash-bootstrap-components
