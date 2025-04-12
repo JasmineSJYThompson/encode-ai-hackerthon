@@ -28,6 +28,7 @@ if button:
     try:
         converter = DeFiConverter()
         number_tokens_to = converter.convert_currency(number_tokens_from, from_token, to_token)
+        current_task.empty()
         st.subheader(f"{number_tokens_from:.2f} {from_token} becomes {number_tokens_to:.2f} {to_token}")
     except ValueError as e:
         st.write(e)
