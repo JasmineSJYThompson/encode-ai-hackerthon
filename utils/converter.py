@@ -107,7 +107,7 @@ class DeFiConverter:
             return amount * rate
 
         else:
-            raise ValueError("Conversion between the provided currencies is not supported (fiat-to-fiat is excluded).")
+            raise ValueError("Conversion between the provided currencies is not supported.")
 
     # ------------------- Historical Data (Optional) -------------------
     def get_conversion_rate_history(self, from_currency: str, to_currency: str, days: int = 1) -> pd.DataFrame:
