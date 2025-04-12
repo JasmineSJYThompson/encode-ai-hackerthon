@@ -1,9 +1,7 @@
 import streamlit as st
 from analyzer import TokenSwapAnalyzer
-from data_fetcher2 import MarketDataFetcher
-
-analyzer = TokenSwapAnalyzer()
-data_fetcher = MarketDataFetcher()
+from data_fetcher import MarketDataFetcher
+from converter import DeFiConverter
 
 # Streamlit sidebar
 with st.sidebar:
@@ -35,11 +33,13 @@ current_task = st.empty()
 if button:
     if function_selection == "Generate Report":
         current_task.text("Writing report...")
+        analyzer = TokenSwapAnalyzer()
         report = analyzer.compare_tokens(from_token, to_token)  # BTC → ETH
         current_task.empty()
         st.write(report)
     elif function_selection == "Exchange Rate Calculator":
         current_task.text("Retrieving data...")
+        data_fetcher = MarketDataFetcher()
         price_in = data_fetcher.get_token_data(from_token)["price"]
         price_out = data_fetcher.get_token_data(to_token)["price"]
         rate = price_in/price_out

@@ -1,15 +1,17 @@
 from data_fetcher import MarketDataFetcher
 from predictor import ExchangeRatePredictor
+import numpy as np
+
 class TokenSwapAnalyzer:
     def __init__(self):
         self.fetcher = MarketDataFetcher()
         self.predictor = ExchangeRatePredictor()
-        self.data_from=None
-        self.data_to=None
 
     def compare_tokens(self, from_token, to_token):
         data_from = self.fetcher.get_token_data(from_token)
         data_to = self.fetcher.get_token_data(to_token)
+
+        #print("Debug:", data_from["raw_chart_data"])
 
         if not data_from or not data_to:
             return "❌ Error fetching data. Please try again."
@@ -43,8 +45,11 @@ class TokenSwapAnalyzer:
 
     def make_decision(self, data_from, data_to):
         # Extract last 24h prices
-        prices_from = [p[1] for p in data_from['raw_chart_data']['prices']]
-        prices_to = [p[1] for p in data_to['raw_chart_data']['prices']]
+        #prices_from = [p[1] for p in data_from['raw_chart_data']['prices']]
+        #prices_to = [p[1] for p in data_to['raw_chart_data']['prices']]
+        # I changed some stuff here because there is no prices subindex now for some reason
+        prices_from = np.array(data_from['raw_chart_data'])[:, 1]
+        prices_to =  np.array(data_to['raw_chart_data'])[:, 1]
 
         # Predict next-hour exchange rate
         predicted = self.predictor.predict_next_rate(prices_from, prices_to)
