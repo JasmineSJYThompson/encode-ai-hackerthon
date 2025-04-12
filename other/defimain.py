@@ -1,4 +1,4 @@
-from converter import DeFiConverter
+from utils.converter import DeFiConverter
 
 def test_conversions(converter: DeFiConverter):
     # Test fiat-to-crypto conversion: USD to BTC

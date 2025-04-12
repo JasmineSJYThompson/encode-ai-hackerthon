@@ -2,7 +2,7 @@ import dash
 from dash import dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 
-from analyzer import TokenSwapAnalyzer
+from utils.analyzer import TokenSwapAnalyzer
 import get_transaction_data
 
 # Initialize app

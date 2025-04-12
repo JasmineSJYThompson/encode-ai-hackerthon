@@ -1,7 +1,5 @@
 import streamlit as st
-from analyzer import TokenSwapAnalyzer
-from data_fetcher import MarketDataFetcher
-from converter import DeFiConverter
+from utils.analyzer import TokenSwapAnalyzer
 
 # Streamlit sidebar
 with st.sidebar:

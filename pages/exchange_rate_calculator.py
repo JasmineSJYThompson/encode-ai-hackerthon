@@ -1,5 +1,5 @@
 import streamlit as st
-from converter import DeFiConverter
+from utils.converter import DeFiConverter
 
 # Streamlit sidebar
 with st.sidebar:
