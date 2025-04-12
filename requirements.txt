@@ -11,4 +11,3 @@ matplotlib
 dash
 dash-bootstrap-components
 gunicorn
-openai==0.28
