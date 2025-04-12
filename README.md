@@ -1,6 +1,6 @@
-📉 Crypto Risk Notifier
+📉 ArgusFi App
 
-Crypto Risk Notifier is a Streamlit-powered web application with a mobile app to provide users with real-time notifications about potential risks in the cryptocurrency market. Whether it's sudden market volatility, security breaches, or regulatory changes, this tool aims to keep you informed and ahead of potential threats.
+ArgusFi App is a Streamlit-powered web application with a mobile app to provide users with real-time notifications about potential risks in the cryptocurrency market. Whether it's sudden market volatility, security breaches, or regulatory changes, this tool aims to keep you informed and ahead of potential threats.
 🚀 Features
 
     Real-Time Risk Monitoring: Continuously analyzes market data to identify potential risks.
