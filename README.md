@@ -37,10 +37,6 @@ pip install -r requirements.txt
 Run the Application:
 
     streamlit run app.py
-
-    Set Up Mobile Notifications:
-
-        Install the companion mobile app from <insert link here>
         
 📱 Mobile App Integration
 
