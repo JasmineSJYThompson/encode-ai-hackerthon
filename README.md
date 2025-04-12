@@ -41,6 +41,8 @@ Run the Application:
         
 📱 Mobile App Integration
 
+The Android app can be downloaded from the link --> https://kamilamin43920.s3.eu-north-1.amazonaws.com/AiAgent.apk
+
 The mobile app complements the web application by providing:
 
     Push Notifications: Immediate alerts about identified risks.
