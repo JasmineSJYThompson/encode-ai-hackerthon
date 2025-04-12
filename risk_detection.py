@@ -1,7 +1,9 @@
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 
-df = pd.read_csv("integrated_data.csv", parse_dates=["timestamp"])
+# df = pd.read_csv("integrated_data.csv", parse_dates=["timestamp"])
+df = pd.read_csv("mock_integrated_data.csv", parse_dates=["timestamp"])
+
 print("Integrated Data from CSV:")
 print(df)
 df['price_change'] = df['ethereum_price'].diff().fillna(0)
@@ -18,3 +20,5 @@ df['anomaly'] = model.fit_predict(df[features])
 
 print("Risk Detection Results:")
 print(df[['timestamp', 'ethereum_price'] + features + ['anomaly']])
+
+df.to_csv('risk_detection.csv', index=False)
