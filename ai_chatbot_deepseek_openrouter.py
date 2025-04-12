@@ -5,7 +5,7 @@ import openai
 # Set up the API key and OpenRouter base URL.
 # -----------------------------
 # Retrieve the API key from Streamlit secrets (or replace with your key)
-OPENROUTER_API_KEY = ""
+OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 
 # Configure the OpenAI client to use OpenRouter’s API base.
 openai.api_base = "https://openrouter.ai/api/v1"

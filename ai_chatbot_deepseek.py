@@ -6,7 +6,7 @@ import openai
 # Configure OpenRouter via the OpenAI client.
 # -----------------------------
 # Replace with your OpenRouter API key.
-OPENROUTER_API_KEY = "YOUR KEY"
+OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 openai.api_base = "https://openrouter.ai/api/v1"
 openai.api_key = OPENROUTER_API_KEY
 
@@ -19,7 +19,7 @@ def get_news_data(query):
     Change the 'q' parameter as needed for broader or more focused queries.
     """
     # Replace with your actual NewsAPI key (or add it to your Streamlit secrets).
-    NEWS_API_KEY = "YOUR KEY"
+    NEWS_API_KEY = st.secrets["NEWS_API_KEY"]
     url = "https://newsapi.org/v2/everything"
     params = {
         "q": "cryptocurrency OR DeFi",  # Query for crypto or DeFi articles.
