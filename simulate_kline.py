@@ -47,6 +47,7 @@ def generate_dense_kline_data(num_bars=200, start_price=100.0, seed=42, interval
     df = pd.DataFrame(k_data)
     df.set_index('Date', inplace=True)
     df.index = pd.to_datetime(df.index)
+
     return df
 
 if __name__ == '__main__':
