@@ -11,6 +11,10 @@ ArgusFi App is a Streamlit-powered web application with a mobile app to provide 
 
     Customizable Alerts: Allows users to set their own risk thresholds and notification preferences.
 
+🌐 Web location
+
+    The web-app is available running live at the link: [https://argusfi.streamlit.app/](https://argusfi.streamlit.app/)
+
 🛠️ Installation
 Prerequisites
 
