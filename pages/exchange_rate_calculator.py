@@ -18,7 +18,11 @@ current_task = st.empty()
 
 if button:
     current_task.text("Retrieving data...")
-    converter = DeFiConverter()
-    number_tokens_to = converter.convert_currency(number_tokens_from, from_token, to_token)
-    current_task.empty()
-    st.subheader(f"{number_tokens_from:.2f} {from_token} becomes {number_tokens_to:.2f} {to_token}")
+    try:
+        converter = DeFiConverter()
+        number_tokens_to = converter.convert_currency(number_tokens_from, from_token, to_token)
+        st.subheader(f"{number_tokens_from:.2f} {from_token} becomes {number_tokens_to:.2f} {to_token}")
+    except ValueError as e:
+        st.write(e)
+        current_task.empty()
+
