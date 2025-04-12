@@ -23,6 +23,7 @@ Steps
     Clone the Repository:
 
 git clone https://github.com/JasmineSJYThompson/encode-ai-hackerthon
+
 cd encode-ai-hackerthon
 
 Install Dependencies:
