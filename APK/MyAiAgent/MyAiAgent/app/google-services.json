@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "454439237918",
+    "firebase_url": "https://myaiagent-45599-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "myaiagent-45599",
+    "storage_bucket": "myaiagent-45599.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454439237918:android:0ba894c76996c68d8ab10f",
+        "android_client_info": {
+          "package_name": "com.aroole.myaiagent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvjIctT36VckV7hrUVG-jwQTgnKxx0Iu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

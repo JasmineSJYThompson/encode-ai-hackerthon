@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:padding="15dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="bottom"
+            android:src="@drawable/eth"
+            android:layout_width="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="20dp">
+
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/idCurBal"
+            android:layout_marginTop="35dp"
+            android:text="Wallet : "
+            android:textStyle="bold|italic"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/idEthBal"
+            android:layout_marginTop="35dp"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:text="Latest Market Insights!"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"/>
+
+    <com.github.anastr.speedviewlib.SpeedView
+        android:id="@+id/speedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn2"
+        android:visibility="gone"
+        android:text="Wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:id="@+id/idWalletCreation"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <!-- Wallet creation section -->
+            <TextView
+                android:id="@+id/walletStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a New Wallet"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:background="@drawable/edit_text_border"
+                android:id="@+id/passwordEditText"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_wallet_password"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"/>
+
+
+            <Button
+                android:id="@+id/createWalletButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Wallet"
+                android:layout_marginBottom="20dp"
+                android:onClick="createWallet"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/addressTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Ethereum Wallet Address: "
+                    android:layout_marginTop="16dp" />
+                <TextView
+                    android:id="@+id/addressText_012"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/id_btnCopy"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:text="Copy"
+                    android:textSize="7dp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <!-- Wallet address display -->
+
+
+        <!-- Transaction Section -->
+        <EditText
+            android:background="@drawable/edit_text_border"
+            android:padding="10dp"
+            android:id="@+id/recipientAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Recipient Address"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:background="@drawable/edit_text_border"
+            android:padding="10dp"
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount to Send (ETH)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/sendTransactionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send ETH"
+            android:layout_marginBottom="10dp"
+            android:onClick="sendTransaction"/>
+
+
+
+
+
+
+
+        <TextView
+            android:text="Subscribe to receive Market Trends Updates."
+            android:layout_width="match_parent"
+            android:textSize="15dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            />
+
+        <Button
+            android:layout_marginBottom="30dp"
+            android:id="@+id/btn1"
+            android:text="Subscribe AI Agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Last 5 Transactions History"
+            android:layout_width="match_parent"
+            android:textSize="15dp"
+            android:id="@+id/idhis"
+            android:visibility="gone"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:text="Subscribe to receive Market Trends Updates."
+            android:layout_width="match_parent"
+            android:textSize="15dp"
+            android:visibility="gone"
+            android:id="@+id/idresultTxt"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:longClickable="true"
+            android:textIsSelectable="true" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</ScrollView>
