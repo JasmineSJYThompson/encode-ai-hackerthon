@@ -31,6 +31,9 @@ if button:
         current_task.empty()
         st.subheader(f"{number_tokens_from:.2f} {from_token} becomes {number_tokens_to:.2f} {to_token}")
     except ValueError as e:
-        st.write(e)
+        st.error(e)
+        current_task.empty()
+    except Exception as e:
+        st.error(e)
         current_task.empty()
 
