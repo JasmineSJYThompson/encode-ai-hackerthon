@@ -1,4 +1,4 @@
-from analyzer import TokenSwapAnalyzer
+from utils.analyzer import TokenSwapAnalyzer
 
 analyzer = TokenSwapAnalyzer()
 

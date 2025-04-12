@@ -2,7 +2,6 @@ import requests
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
-import time
 
 class DeFiConverter:
     """
@@ -108,7 +107,7 @@ class DeFiConverter:
             return amount * rate
 
         else:
-            raise ValueError("Conversion between the provided currencies is not supported (fiat-to-fiat is excluded).")
+            raise ValueError("Conversion between the provided currencies is not supported.")
 
     # ------------------- Historical Data (Optional) -------------------
     def get_conversion_rate_history(self, from_currency: str, to_currency: str, days: int = 1) -> pd.DataFrame:
@@ -200,12 +199,13 @@ class DeFiConverter:
         """
         try:
             df_history = self.get_conversion_rate_history(from_currency, to_currency, days)
-            plt.figure(figsize=(10, 5))
+            fig = plt.figure(figsize=(10, 5))
             plt.plot(df_history["timestamp"], df_history["conversion_rate"], label="Conversion Rate")
             plt.xlabel("Time")
             plt.ylabel("Conversion Rate")
             plt.title(f"Historical Conversion Rate: {from_currency.upper()} to {to_currency.upper()}")
             plt.legend()
             plt.show()
+            return fig
         except Exception as e:
             print("Error plotting historical data:", e)

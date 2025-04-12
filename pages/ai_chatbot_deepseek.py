@@ -61,7 +61,7 @@ Answer the following question briefly:
 Q: {user_query}
 A:"""
     
-    st.write("**Prompt sent to OpenRouter:**", prompt)  # Optional debug output
+    #st.write("**Prompt sent to OpenRouter:**", prompt)  # Optional debug output
     
     messages = [{"role": "user", "content": prompt}]
     
@@ -72,7 +72,7 @@ A:"""
             messages=messages,
             max_tokens=150  # Adjust as necessary
         )
-        st.write("**Raw API Response:**", completion)  # Optional debug output
+        #st.write("**Raw API Response:**", completion)  # Optional debug output
         
         if "choices" in completion and len(completion["choices"]) > 0:
             answer = completion["choices"][0]["message"]["content"].strip()

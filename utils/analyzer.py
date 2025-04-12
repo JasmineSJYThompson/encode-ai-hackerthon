@@ -1,5 +1,5 @@
-from data_fetcher import MarketDataFetcher
-from predictor import ExchangeRatePredictor
+from utils.data_fetcher import MarketDataFetcher
+from utils.predictor import ExchangeRatePredictor
 import numpy as np
 
 class TokenSwapAnalyzer:
@@ -63,9 +63,9 @@ class TokenSwapAnalyzer:
 
         # Decision logic
         if percent_diff > 1:
-            return f"⏳ Prediction: Rate expected to improve by {percent_diff:.2f}%. You may wait before swapping."
+            return f"⏳ Prediction: Rate expected to improve by {percent_diff:.2f}%. You may want to wait before swapping."
         elif percent_diff < -1:
-            return f"✅ Prediction: Rate may worsen by {abs(percent_diff):.2f}%. Good time to convert now."
+            return f"✅ Prediction: Rate may worsen by {abs(percent_diff):.2f}%. It's a good time to convert now."
         else:
-            return f"ℹ️ Prediction: Minimal change ({percent_diff:.2f}%). Convert if needed, or wait for better trend."
+            return f"ℹ️ Prediction: Minimal change ({percent_diff:.2f}%). Convert if needed, or wait for a better trend."
 

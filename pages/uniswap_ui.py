@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
-from risk import detect_risk_at_time
+from utils.risk import detect_risk_at_time
 
 st.set_page_config(page_title="Uniswap Demo with Risk Detection", page_icon="💱", layout="centered")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("risk_detection.csv", parse_dates=["timestamp"])
+    df = pd.read_csv("data/mock_integrated_data.csv", parse_dates=["timestamp"])
     return df
 
 df = load_data()
@@ -75,7 +75,7 @@ df['time_diff'] = (df['timestamp'] - pd.to_datetime(selected_time)).abs()
 closest_row = df.sort_values('time_diff').iloc[0]
 eth_price = float(closest_row["ethereum_price"])
 
-st.markdown('<div class="swap-box">', unsafe_allow_html=True)
+#st.markdown('<div class="swap-box">', unsafe_allow_html=True)
 
 st.markdown('<div class="token-row">', unsafe_allow_html=True)
 st.markdown('<div class="token-label">From <span class="token-select">USDC</span></div>', unsafe_allow_html=True)
