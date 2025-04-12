@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AiAgent</string>
+    <string name="enter_wallet_password">Enter Wallet Password</string>
+</resources>
