@@ -4,6 +4,8 @@ class TokenSwapAnalyzer:
     def __init__(self):
         self.fetcher = MarketDataFetcher()
         self.predictor = ExchangeRatePredictor()
+        self.data_from=None
+        self.data_to=None
 
     def compare_tokens(self, from_token, to_token):
         data_from = self.fetcher.get_token_data(from_token)
@@ -19,24 +21,24 @@ class TokenSwapAnalyzer:
         advice = self.make_decision(data_from, data_to)
 
         report = f"""
-📊 Token Swap Report: {from_token.upper()} → {to_token.upper()}
-
-🔁 Current Rate:
-  1 {from_token.upper()} = {rate:.4f} {to_token.upper()}
-
-💹 {from_token.upper()}:
-  Price: ${data_from['price']:.2f}
-  24h Change: {data_from['price_change_24h']}%
-  Volatility: {data_from['volatility']}%
-
-💹 {to_token.upper()}:
-  Price: ${data_to['price']:.2f}
-  24h Change: {data_to['price_change_24h']}%
-  Volatility: {data_to['volatility']}%
-
-🧠 AI Insight:
-{advice}
-"""
+        📊 Token Swap Report: {from_token.upper()} → {to_token.upper()}
+        
+        🔁 Current Rate:
+          1 {from_token.upper()} = {rate:.4f} {to_token.upper()}
+        
+        💹 {from_token.upper()}:
+          Price: ${data_from['price']:.2f}
+          24h Change: {data_from['price_change_24h']}%
+          Volatility: {data_from['volatility']}%
+        
+        💹 {to_token.upper()}:
+          Price: ${data_to['price']:.2f}
+          24h Change: {data_to['price_change_24h']}%
+          Volatility: {data_to['volatility']}%
+        
+        🧠 AI Insight:
+        {advice}
+        """
         return report
 
     def make_decision(self, data_from, data_to):
