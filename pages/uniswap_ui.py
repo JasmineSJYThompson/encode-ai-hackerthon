@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
-from risk import detect_risk_at_time
+from utils.risk import detect_risk_at_time
 
 st.set_page_config(page_title="Uniswap Demo with Risk Detection", page_icon="💱", layout="centered")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("risk_detection.csv", parse_dates=["timestamp"])
+    df = pd.read_csv("data/risk_detection.csv", parse_dates=["timestamp"])
     return df
 
 df = load_data()
