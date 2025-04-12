@@ -13,7 +13,7 @@ ArgusFi App is a Streamlit-powered web application with a mobile app to provide 
 
 🌐 Web location
 
-    The web-app is available running live at the link: [https://argusfi.streamlit.app/](https://argusfi.streamlit.app/)
+The web-app is available running live at the link: [https://argusfi.streamlit.app/](https://argusfi.streamlit.app/)
 
 🛠️ Installation
 Prerequisites
