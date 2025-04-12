@@ -12,12 +12,12 @@ with st.sidebar:
     if function_selection in ("Generate Report", "Exchange Rate Calculator"):
         st.markdown("Enter two token names (e.g., bitcoin, ethereum, etc...)")
 
-        from_token = st.text_input("Enter token we are converting from", value="bitcoin")
-        to_token = st.text_input("Enter token we are converting to", value="ethereum")
+        from_token = st.text_input("Enter token we are converting from", value="BTC")
+        to_token = st.text_input("Enter token we are converting to", value="ETH")
 
     number_tokens_from = 1
     if function_selection == "Exchange Rate Calculator":
-        number_tokens_from = st.number_input("Insert number of tokens")
+        number_tokens_from = st.number_input("Insert number of tokens", value=1, min_value=0)
 
     button = st.empty()
     if function_selection == "Generate Report":
@@ -39,10 +39,11 @@ if button:
         st.write(report)
     elif function_selection == "Exchange Rate Calculator":
         current_task.text("Retrieving data...")
-        data_fetcher = MarketDataFetcher()
-        price_in = data_fetcher.get_token_data(from_token)["price"]
-        price_out = data_fetcher.get_token_data(to_token)["price"]
-        rate = price_in/price_out
+        #data_fetcher = MarketDataFetcher()
+        #price_in = data_fetcher.get_token_data(from_token)["price"]
+        #price_out = data_fetcher.get_token_data(to_token)["price"]
+        #rate = price_in/price_out
+        converter = DeFiConverter()
+        number_tokens_to = converter.convert_currency(number_tokens_from, from_token, to_token)
         current_task.empty()
-        st.subheader(f"{number_tokens_from:.2f} {from_token}")
-        st.subheader(f"becomes {number_tokens_from*rate:.2f} {to_token}")
+        st.subheader(f"{number_tokens_from:.2f} {from_token} becomes {number_tokens_to:.2f} {to_token}")

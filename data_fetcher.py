@@ -29,12 +29,17 @@ class MarketDataFetcher:
         cache_key = (token_id, vs_currency)
 
         if cache_key in self.cache:
+            print("Using cached result")
             return self.cache[cache_key]  # ✅ use cached result
 
         try:
+            print("Fetching data")
             data = self.cg.get_coin_market_chart_by_id(id=token_id, vs_currency=vs_currency, days=1)
+            print("Fetching current price")
             current_price = self.cg.get_price(ids=token_id, vs_currencies=vs_currency)
+            print("Fetching market data")
             market_data = self.cg.get_coin_by_id(token_id)['market_data']
+            print("Fetching volatility")
             volatility = self.calculate_volatility(data['prices'])
 
             result = {

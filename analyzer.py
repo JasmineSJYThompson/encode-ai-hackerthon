@@ -8,6 +8,7 @@ class TokenSwapAnalyzer:
         self.predictor = ExchangeRatePredictor()
 
     def compare_tokens(self, from_token, to_token):
+        print("Fetching data...")
         data_from = self.fetcher.get_token_data(from_token)
         data_to = self.fetcher.get_token_data(to_token)
 
@@ -20,6 +21,7 @@ class TokenSwapAnalyzer:
         rate = data_from['price'] / data_to['price']
 
         # Rule-based analysis
+        print("Making decision...")
         advice = self.make_decision(data_from, data_to)
 
         report = f"""
