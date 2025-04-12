@@ -4,9 +4,16 @@ from utils.converter import DeFiConverter
 # Streamlit sidebar
 with st.sidebar:
     st.markdown("Enter two token names (e.g., bitcoin, ethereum, etc...)")
+    
+    coins = ('BTC', 'ETH', 'USDC', 'USDT', 'BNB', 'SOL',
+             'ADA', 'MATIC', 'DOT', 'LTC', 'GBP', 'USD')
 
-    from_token = st.text_input("Enter token we are converting from", value="BTC")
-    to_token = st.text_input("Enter token we are converting to", value="ETH")
+    from_token = st.selectbox(
+    "Enter token we are converting from",
+    coins)
+    to_token = st.selectbox(
+        "Enter token we are converting to",
+        coins)
 
     number_tokens_from = st.number_input("Insert number of tokens", value=1, min_value=0)
 
