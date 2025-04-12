@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 
 # 在指定时间点上进行风险检测
-def detect_risk_at_time(target_time, csv_path="data/mock_integrated_data.csv"):
+def detect_risk_at_time(target_time, csv_path="data/risk_detection.csv"):
     df = pd.read_csv(csv_path, parse_dates=["timestamp"])
     df['price_change'] = df['ethereum_price'].diff().fillna(0)
     features = ['price_change', 'transaction_count', 'gas_used', 'difficulty', 'ethereum_24h_change']
