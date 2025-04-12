@@ -75,7 +75,7 @@ df['time_diff'] = (df['timestamp'] - pd.to_datetime(selected_time)).abs()
 closest_row = df.sort_values('time_diff').iloc[0]
 eth_price = float(closest_row["ethereum_price"])
 
-st.markdown('<div class="swap-box">', unsafe_allow_html=True)
+#st.markdown('<div class="swap-box">', unsafe_allow_html=True)
 
 st.markdown('<div class="token-row">', unsafe_allow_html=True)
 st.markdown('<div class="token-label">From <span class="token-select">USDC</span></div>', unsafe_allow_html=True)
