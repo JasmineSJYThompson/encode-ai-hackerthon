@@ -55,12 +55,20 @@ The mobile app complements the web application by providing:
 
     Data Collection: The application fetches real-time data from various cryptocurrency exchanges and news sources.
 
+    Risk Analysis: Implements algorithms to assess potential risks based on mar>
+
+    Alert Generation: When a potential risk is identified, the system generates>
+
+    Notification Delivery: The alert is sent to the user's mobile device
+
 App Display
 
-![Screenshot1](images/screenshot1.png)
+![Screenshot2](images/screenshot2.png)
+
+![Screenshot3](images/screenshot3.png)
 
     Risk Analysis: Implements algorithms to assess potential risks based on market trends, news sentiment, and other indicators.
 
     Alert Generation: When a potential risk is identified, the system generates an alert.
 
-    Notification Delivery: The alert is sent to the user's mobile device through the integrated mobile app.
+    Notification Delivery: The alert is sent to the user's mobile device through the integr
