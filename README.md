@@ -71,9 +71,9 @@ Contributors
 
 - JasmineSJYThompson Jasmine Thompson
 
-- CHANCHIPUI Chi Pui Chan
+- CHANCHIPUI Chi Pui (Martin)Chan
 
-- MorganZhang44 Morgan (Martin) Zhang
+- MorganZhang44 Morgan Zhang
 
 - Kamil2916 Kamil Amin
 
