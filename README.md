@@ -65,7 +65,7 @@ App Display
 
 ![Screenshot2](images/screenshot2.png)
 
-![Screenshot3](images/screenshot3.png)
+![Screenshot3](images/screenshot3.jpg)
 
     Risk Analysis: Implements algorithms to assess potential risks based on market trends, news sentiment, and other indicators.
 
