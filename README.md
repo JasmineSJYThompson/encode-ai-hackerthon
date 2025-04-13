@@ -45,6 +45,7 @@ The Android app can be downloaded from the link --> https://encodehackerthon45.s
 
 The mobile app complements the web application by providing:
 
+
     Push Notifications: Immediate alerts about identified risks.
 
     Risk Dashboard: A concise overview of current market conditions.
