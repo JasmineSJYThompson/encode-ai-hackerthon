@@ -10,10 +10,10 @@ with st.sidebar:
 
     from_token = st.selectbox(
     "Enter token we are converting from",
-    coins)
+    coins, index=0)
     to_token = st.selectbox(
         "Enter token we are converting to",
-        coins)
+        coins, index=1)
 
     number_tokens_from = st.number_input("Insert number of tokens", value=1, min_value=0)
 
