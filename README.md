@@ -45,11 +45,10 @@ The Android app can be downloaded from the link --> https://kamilamin43920.s3.eu
 
 The mobile app complements the web application by providing:
 
-    Push Notifications: Immediate alerts about identified risks.
-
-    Risk Dashboard: A concise overview of current market conditions.
-
-    Settings: Customize your notification preferences and risk thresholds.
+1. The mobile app is based on Web3 and includes an Ethereum Wallet, allowing users to create their own wallet and send crypto with a single click.
+2. It features an integrated indicator to show the current market risk, powered by ArgusFi (Team Dashboard).
+3. Users can receive alerts via mobile notifications about market trends.
+4. The app has the potential to advise fund managers once they create an ETH Wallet and start making transactions on platforms like eToro or Coinbase. Their transaction history can be tracked by the AiAgent App to optimize yield and portfolio performance.
 
 🧠 How It Works
 
