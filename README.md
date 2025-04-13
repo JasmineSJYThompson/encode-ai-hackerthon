@@ -60,3 +60,4 @@ The mobile app complements the web application by providing:
     Alert Generation: When a potential risk is identified, the system generates an alert.
 
     Notification Delivery: The alert is sent to the user's mobile device through the integrated mobile app.
+ 
