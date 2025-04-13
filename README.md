@@ -45,6 +45,8 @@ Run the Application:
 
 The Android app can be downloaded from the link --> https://encodehackerthon45.s3.eu-north-1.amazonaws.com/AiAgent.apk
 
+![Instructions](images/installation_instruction.png)
+
 The mobile app complements the web application by providing:
 
 1. The mobile app is based on Web3 and includes an Ethereum Wallet, allowing users to create their own wallet and send crypto with a single click.
