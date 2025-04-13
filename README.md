@@ -64,6 +64,10 @@ The mobile app complements the web application by providing:
 
 <img src="images/screen.jpg" width="400" />
 
+Technologies Used for Mobile App
+
+- Java and XML
+
 Contributors
 
 - JasmineSJYThompson Jasmine Thompson
