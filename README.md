@@ -38,6 +38,14 @@ pip install -r requirements.txt
 Run the Application:
 
     streamlit run app.py
+
+🖥️ Technologies used for Web App
+
+- Streamlit (web interface), AI chatbot uses OpenAI, Deepseek, NewsAPI and OpenRouter, Token Risk Analyser and Exchange Rate Calculator use CoinGeckoApi, Nethermind Info uses Nethermind and Starknet
+
+App Display
+
+![Screenshot2](images/screenshot2.png)
         
 📱 Mobile App Integration
 
@@ -55,24 +63,6 @@ The mobile app complements the web application by providing:
 4. The app has the potential to advise fund managers once they create an ETH Wallet and start making transactions on platforms like eToro or Coinbase. Their transaction history can be tracked by the AiAgent App to optimize yield and portfolio performance.
 
 <img src="images/screen.jpg" width="400" />
-
-🧠 How It Works
-
-    Data Collection: The application fetches real-time data from various cryptocurrency exchanges and news sources.
-
-    Risk Analysis: Implements algorithms to assess potential risks
-
-    Alert Generation: When a potential risk is identified, the system generates an alert notification
-
-    Notification Delivery: The alert is sent to the user's mobile device through the integrated mobile app.
-
-🖥️ Technologies used for Web App
-
-- Streamlit (web interface), AI chatbot uses OpenAI, Deepseek, NewsAPI and OpenRouter, Token Risk Analyser and Exchange Rate Calculator use CoinGeckoApi, Nethermind Info uses Nethermind and Starknet
-
-App Display
-
-![Screenshot2](images/screenshot2.png)
 
 Contributors
 
