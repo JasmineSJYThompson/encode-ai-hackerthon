@@ -9,11 +9,11 @@ with st.sidebar:
              'ADA', 'MATIC', 'DOT', 'LTC', 'GBP', 'USD')
 
     from_token = st.selectbox(
-    "Enter token we are converting from", index=0,
-    coins)
+    "Enter token we are converting from",
+    coins, index=0)
     to_token = st.selectbox(
-    "Enter token we are converting to", index=1,
-    coins)
+        "Enter token we are converting to",
+        coins, index=1)
 
     number_tokens_from = st.number_input("Insert number of tokens", value=1, min_value=0)
 
