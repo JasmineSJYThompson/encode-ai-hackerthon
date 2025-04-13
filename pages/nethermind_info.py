@@ -13,6 +13,18 @@ headers = {
     'Content-Type': 'application/json'
 }
 
+url = "https://rpc.nethermind.io/mainnet-juno"
+
+payload = json.dumps({
+    "jsonrpc": "2.0",
+    "method": "starknet_blockHashAndNumber",
+    "params": [],
+    "id": 0
+})
+headers = {
+    'x-apikey': 'YOUR API KEY',
+    'Content-Type': 'application/json'
+}
 
 # Function to send JSON-RPC requests with the API key in headers
 def send_rpc_request(method, params=None):
@@ -24,6 +36,12 @@ def send_rpc_request(method, params=None):
         "method": method,
         "params": params,
         "id": 1
+    }
+
+    payload = {
+        "jsonrpc": "2.0",
+        "method": "juno_version",
+        "id": 0
     }
 
     response = requests.post(rpc_url, json=payload, headers=headers)
@@ -56,17 +74,23 @@ starknet_option = st.selectbox(
     ]
 )
 
+button = st.button("Retrieve data")
+
+current_task = st.empty()
+
 # Handle the selected StarkNet option
 if starknet_option == "Latest Block Data":
     st.markdown("""
     ### Latest Block Data
     This section shows information about the most recent block in the StarkNet network, including the block hash and block number.
 
-    Fetching data...
     """)
-    # Fetch latest block data
-    result = send_rpc_request("starknet_blockHashAndNumber", ["latest"])
-    st.write(result)
+    if button:
+        current_task = st.text("Fetching data...")
+        # Fetch latest block data
+        result = send_rpc_request("starknet_blockHashAndNumber", [])
+        current_task = st.empty()
+        st.write(result)
 
 elif starknet_option == "StarkNet Block Data by Hash":
     st.markdown("""
@@ -76,9 +100,10 @@ elif starknet_option == "StarkNet Block Data by Hash":
     Fetching data...
     """)
     # Example: Block hash data
-    block_hash = "0x123456789abcdef"  # Replace with an actual block hash
-    result = send_rpc_request("starknet_getBlockByHash", [block_hash])
-    st.write(result)
+    block_hash = "0x167ba7aac2d97b82a802a820fa96d00925167a74748ffbc9201e46dbd2f46a5"  # Replace with an actual block hash
+    if button:
+        result = send_rpc_request("starknet_getBlockByHash", [block_hash])
+        st.write(result)
 
 elif starknet_option == "StarkNet Gas Fees":
     st.markdown("""
