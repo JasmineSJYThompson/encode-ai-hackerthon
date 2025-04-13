@@ -67,6 +67,8 @@ App Display
 
 ![Screenshot3](images/screenshot3.jpg)
 
+<img src="images/screenshot3.jpg" width="100" />
+
     Risk Analysis: Implements algorithms to assess potential risks based on market trends, news sentiment, and other indicators.
 
     Alert Generation: When a potential risk is identified, the system generates an alert.
