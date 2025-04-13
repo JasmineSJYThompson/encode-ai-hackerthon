@@ -41,7 +41,7 @@ Run the Application:
         
 📱 Mobile App Integration
 
-The Android app can be downloaded from the link --> https://kamilamin43920.s3.eu-north-1.amazonaws.com/AiAgent.apk
+The Android app can be downloaded from the link --> https://encodehackerthon45.s3.eu-north-1.amazonaws.com/AiAgent.apk
 
 The mobile app complements the web application by providing:
 
@@ -58,7 +58,7 @@ The mobile app complements the web application by providing:
 
     Alert Generation: When a potential risk is identified, the system generates an alert notification
 
-    Notification Delivery: The alert is sent to the user's mobile device
+    Notification Delivery: The alert is sent to the user's mobile device through the integrated mobile app.
 
 🖥️ Technologies used for Web App
 
