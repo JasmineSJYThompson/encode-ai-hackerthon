@@ -1,0 +1,19 @@
+
+        📊 Token Swap Report: BTC → ETH
+        
+        🔁 Current Rate:
+          1 BTC = 52.3727 ETH
+        
+        💹 BTC:
+          Price: $84506.00
+          24h Change: 0.93204%
+          Volatility: 0.0786%
+        
+        💹 ETH:
+          Price: $1613.55
+          24h Change: 2.03047%
+          Volatility: 0.1317%
+        
+        🧠 AI Insight:
+        ℹ️ Prediction: Minimal change (-0.32%). Convert if needed, or wait for a better trend.
+        

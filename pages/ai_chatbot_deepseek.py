@@ -87,7 +87,7 @@ A:"""
 # Streamlit UI for the chatbot.
 # -----------------------------
 def run_chatbot():
-    st.title("🧠 DeFi Chatbot Powered by DeepSeek (via OpenRouter) with NewsAPI")
+    st.title("🧠 AI Chatbot Deepseek")
     st.markdown(
         "Ask any question about the cryptocurrency or DeFi market. "
         "The AI assistant fetches real-time news from NewsAPI and uses DeepSeek to generate its response."

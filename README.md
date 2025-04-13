@@ -56,9 +56,35 @@ The mobile app complements the web application by providing:
 
     Data Collection: The application fetches real-time data from various cryptocurrency exchanges and news sources.
 
-    Risk Analysis: Implements algorithms to assess potential risks based on market trends, news sentiment, and other indicators.
+    Risk Analysis: Implements algorithms to assess potential risks
 
-    Alert Generation: When a potential risk is identified, the system generates an alert.
+    Alert Generation: When a potential risk is identified, the system generates an alert notification
 
+<<<<<<< HEAD
     Notification Delivery: The alert is sent to the user's mobile device through the integrated mobile app.
  
+=======
+    Notification Delivery: The alert is sent to the user's mobile device
+
+🖥️ Technologies used for Web App
+
+- Streamlit (web interface), AI chatbot uses OpenAI, Deepseek, NewsAPI and OpenRouter, Token Risk Analyser and Exchange Rate Calculator use CoinGeckoApi, Nethermind Info uses Nethermind and Starknet
+
+App Display
+
+![Screenshot2](images/screenshot2.png)
+
+<img src="images/screenshot3.jpg" width="400" />
+
+Contributors
+
+- JasmineSJYThompson Jasmine Thompson
+
+- CHANCHIPUI Chi Pui (Martin) Chan
+
+- MorganZhang44 Morgan Zhang
+
+- Kamil2916 Kamil Amin
+
+- recentlyhatched Georgina
+>>>>>>> 1ba9992d56189d0da514991d3837954e61912f9d
