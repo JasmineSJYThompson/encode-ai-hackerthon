@@ -12,8 +12,8 @@ with st.sidebar:
     "Enter token we are converting from", index=0,
     coins)
     to_token = st.selectbox(
-        "Enter token we are converting to", index=1,
-        coins)
+    "Enter token we are converting to", index=1,
+    coins)
 
     number_tokens_from = st.number_input("Insert number of tokens", value=1, min_value=0)
 
