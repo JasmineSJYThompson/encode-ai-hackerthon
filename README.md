@@ -75,7 +75,7 @@ Contributors
 
 - JasmineSJYThompson Jasmine Thompson
 
-- CHANCHIPUI Chi Pui (Martin)Chan
+- CHANCHIPUI Chi Pui (Martin) Chan
 
 - MorganZhang44 Morgan Zhang
 
