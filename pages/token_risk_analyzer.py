@@ -2,7 +2,7 @@ import streamlit as st
 from utils.analyzer import TokenSwapAnalyzer
 import time
 
-MOCK_REPORT=True
+MOCK_REPORT=False
 
 # Streamlit sidebar
 with st.sidebar:
