@@ -65,10 +65,16 @@ App Display
 
 ![Screenshot2](images/screenshot2.png)
 
-![Screenshot3](images/screenshot3.png)
+<img src="images/screenshot3.jpg" width="400" />
 
-    Risk Analysis: Implements algorithms to assess potential risks based on market trends, news sentiment, and other indicators.
+Contributors
 
-    Alert Generation: When a potential risk is identified, the system generates an alert.
+- JasmineSJYThompson Jasmine Thompson
 
-    Notification Delivery: The alert is sent to the user's mobile device through the integr
+- CHANCHIPUI Chi Pui (Martin)Chan
+
+- MorganZhang44 Morgan Zhang
+
+- Kamil2916 Kamil Amin
+
+- recentlyhatched Georgina
