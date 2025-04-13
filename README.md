@@ -41,7 +41,7 @@ Run the Application:
         
 📱 Mobile App Integration
 
-![AIAgent](images/AIAgent.png)
+![AIAgent](images/AiAgent.png)
 
 The Android app can be downloaded from the link --> https://encodehackerthon45.s3.eu-north-1.amazonaws.com/AiAgent.apk
 
@@ -51,10 +51,8 @@ The mobile app complements the web application by providing:
 2. It features an integrated indicator to show the current market risk, powered by ArgusFi (Team Dashboard).
 3. Users can receive alerts via mobile notifications about market trends.
 4. The app has the potential to advise fund managers once they create an ETH Wallet and start making transactions on platforms like eToro or Coinbase. Their transaction history can be tracked by the AiAgent App to optimize yield and portfolio performance.
-"
-<img src="images/screen.jpg" width="1084", height="500" />
 
-![Screen](images/screen.jpg)
+<img src="images/screen.jpg" width="400" />
 
 🧠 How It Works
 
@@ -73,8 +71,6 @@ The mobile app complements the web application by providing:
 App Display
 
 ![Screenshot2](images/screenshot2.png)
-
-<img src="images/screenshot3.jpg" width="400" />
 
 Contributors
 
